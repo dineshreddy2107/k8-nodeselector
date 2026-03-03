@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: pod
+metadata:
+  name: nodeselector-demo
+  labels: 
+    env: test 
+spec:
+  containers:
+    name: nginx 
+    image: nginx
+    imagePullPolicy: Always 
+  nodeSelector:
+    disktype: ssd
